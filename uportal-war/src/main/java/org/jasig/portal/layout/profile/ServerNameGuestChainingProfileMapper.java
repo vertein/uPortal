@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.jasig.portal.layout;
+package org.jasig.portal.layout.profile;
 
 import java.util.Collections;
 import java.util.List;
@@ -98,5 +98,11 @@ public class ServerNameGuestChainingProfileMapper implements IProfileMapper, Ini
     public void setAuthorizedServerNames(Map<String, String> authorizedServerNames) {
 		this.authorizedServerNames = authorizedServerNames;
 	}
+
+    @Override
+    public String toString() {
+        return "ServerNameGuestChainingProfileMapper defaulting to [" + this.defaultProfileName +
+                "] with sub-mappers [" + this.subMappers + "].";
+    }
 
 }
